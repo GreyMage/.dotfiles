@@ -12,6 +12,6 @@ ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
 #install local instance of node (should be included as a submodule
 echo "Attempting user-install of Node.JS"
 cd $DOTFILES_DIR/node/
-./configure --prefix=~/.node
+./configure --prefix=../../.node
 make
 make install
