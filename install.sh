@@ -12,3 +12,7 @@ ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
 echo "Attempting user-install of Node.JS"
 chmod +x $DOTFILES_DIR/backgroundinst/node.sh
 $DOTFILES_DIR/backgroundinst/node.sh &> $DOTFILES_DIR/backgroundinst/node.log &
+
+echo "Attempting user-install of tmux"
+chmod +x $DOTFILES_DIR/noroottmux/tmux_local_install.sh
+$DOTFILES_DIR/noroottmux/tmux_local_install.sh &> $DOTFILES_DIR/noroottmux/tmux_local_install.log &
