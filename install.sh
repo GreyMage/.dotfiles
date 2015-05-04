@@ -9,9 +9,6 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #hookup Bash profile (includes everything in runcom/sources
 ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
 
-#install local instance of node (should be included as a submodule
 echo "Attempting user-install of Node.JS"
-cd $DOTFILES_DIR/node/
-./configure --prefix=../../.node
-make
-make install
+chmod +x $DOTFILES_DIR/backgroundinst/node.sh
+$DOTFILES_DIR/backgroundinst/node.sh &> $DOTFILES_DIR/backgroundinst/node.log &
