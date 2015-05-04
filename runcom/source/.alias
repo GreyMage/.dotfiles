@@ -1,3 +1,6 @@
 alias l="ls -Aoh"
 alias please="sudo"
 alias fuck='sudo $(history -p \!\!)' 
+
+# This makes the local NPM work properly.
+alias npm="node ~/.node/bin/npm"

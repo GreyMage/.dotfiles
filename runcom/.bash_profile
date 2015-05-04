@@ -8,6 +8,7 @@ fi
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
+PATH=$PATH:$HOME/.node/bin
 export PATH
 
 # Source the addons in the dotfiles source dir.
