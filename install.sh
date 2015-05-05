@@ -8,6 +8,7 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 #hookup Bash profile (includes everything in runcom/sources
 ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
+#hookup tmux config. 
 ln -sfv "$DOTFILES_DIR/runcom/.tmux.conf" ~
 
 echo "Attempting user-install of Node.JS"
