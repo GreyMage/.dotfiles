@@ -9,6 +9,7 @@ fi
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 PATH=$PATH:$HOME/.node/bin
+PATH=$PATH:$HOME/local/bin
 export PATH
 
 # Source the addons in the dotfiles source dir.
