@@ -31,7 +31,12 @@ ln -sfv "$DOTFILES_DIR/node-v4.4.3-linux-x64/bin/npm" "$HOME/local/bin/npm"
 if ! command -v tmux > /dev/null; then
 	dfecho "TMUX" "Attempting user-install"
 	chmod +x $DOTFILES_DIR/noroottmux/tmux_local_install.sh
-	$DOTFILES_DIR/noroottmux/tmux_local_install.sh &> $DOTFILES_DIR/noroottmux/tmux_local_install.log &
+	$DOTFILES_DIR/noroottmux/tmux_local_install.sh
+	if [ $? -eq 1 ]; then
+		dfecho "TMUX" "Install failed"
+	fi
 else
 	dfecho "TMUX" "Appears to already be installed. skipping."
 fi
+
+dfecho "DOTFILES" "Done!"
