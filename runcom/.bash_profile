@@ -19,5 +19,5 @@ done
 
 # If tmux local or otherwise is installed, use that as default.
 if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux new-session -A -s main
 fi
