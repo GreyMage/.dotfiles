@@ -3,7 +3,7 @@
 # exit on error
 set -e
 
-cd $DOTFILES_DIR/node/
-./configure --prefix=$HOME/.node
-make
-make install
+#cd $DOTFILES_DIR/node/
+#./configure --prefix=$HOME/.node
+#make
+#make install
