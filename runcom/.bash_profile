@@ -16,3 +16,8 @@ for DOTFILE in `find ~/.dotfiles/runcom/source`
 do
   [ -f "$DOTFILE" ] && source "$DOTFILE"
 done
+
+# If tmux local or otherwise is installed, use that as default.
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
