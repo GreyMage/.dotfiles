@@ -77,23 +77,23 @@ LP_ENABLE_VCS_ROOT=0
 
 # Do you want to use the Git special features?
 # Recommended value is 1
-LP_ENABLE_GIT=1
+LP_ENABLE_GIT=0
 
 # Do you want to use the Subversion special features?
 # Recommended value is 1
-LP_ENABLE_SVN=1
+LP_ENABLE_SVN=0
 
 # Do you want to use the Mercurial special features?
 # Recommended value is 1
-LP_ENABLE_HG=1
+LP_ENABLE_HG=0
 
 # Do you want to use the Fossil special features?
 # Recommended value is 1
-LP_ENABLE_FOSSIL=1
+LP_ENABLE_FOSSIL=0
 
 # Do you want to use the Bazaar special features?
 # Recommanded value is 1
-LP_ENABLE_BZR=1
+LP_ENABLE_BZR=0
 
 # Show time of the last prompt display
 # Recommended value is 0

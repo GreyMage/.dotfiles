@@ -17,7 +17,10 @@ do
   [ -f "$DOTFILE" ] && source "$DOTFILE"
 done
 
-# If tmux local or otherwise is installed, use that as default.
-if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux new-session -A -s main
+#IF WE'RE ON A COMMAND LINE (instead of SCP or something)
+if [ -n "$PS1" ]; then
+	# If tmux local or otherwise is installed, use that as default.
+	if command -v tmux>/dev/null; then
+	  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux new-session -A -s main
+	fi
 fi
