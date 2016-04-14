@@ -39,4 +39,8 @@ else
 	dfecho "TMUX" "Appears to already be installed. skipping."
 fi
 
+dfecho "GIT" "Configuring User"
+git config --global user.name "Eric Cutler"
+git config --global user.email ecutler@cmdagency.com
+
 dfecho "DOTFILES" "Done!"
