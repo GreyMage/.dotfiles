@@ -10,6 +10,8 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
 #hookup tmux config. 
 ln -sfv "$DOTFILES_DIR/runcom/.tmux.conf" ~
+#hookup Liquidprompt config
+ln -sfv "$DOTFILES_DIR/runcom/.liquidpromptrc" ~
 
 echo "Attempting user-install of tmux"
 chmod +x $DOTFILES_DIR/noroottmux/tmux_local_install.sh
