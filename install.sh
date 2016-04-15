@@ -17,6 +17,7 @@ git fetch
 if ! [ `git rev-parse HEAD` == `git fetch && git rev-parse origin/master` ]; then 
 	dfecho "DOTFILES" "Updating\n"
 	[ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master && git submodule update --init --recursive
+	exec $0
 else 
 	dfecho "DOTFILES" "Already up-to-date\n"
 fi
